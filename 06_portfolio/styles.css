@@ -86,8 +86,6 @@ body {
   align-items: center;
   overflow: hidden;
   position: relative;
-
-  /* Adjust the top, right, width, and height properties of the flowers */
 }
 
 .banner h1 {
@@ -129,7 +127,7 @@ body {
   width: 9%;
   max-width: 200px;
   height: auto;
-  z-index: -100;
+  z-index: 1;
 }
 
 .flower-img2 {
@@ -185,7 +183,7 @@ body {
 
 .text h2 {
   margin: 30px;
-  text-align: left; /* Updated to center align the heading on all screen sizes */
+  text-align: left;
 }
 
 .banner-button2 {
@@ -204,11 +202,11 @@ body {
   }
 
   .photo-left {
-    grid-column: 1; /* Position the photo on the left side */
+    grid-column: 1;
   }
 
   .text-right {
-    grid-column: 2; /* Position the text on the right side */
+    grid-column: 2;
     margin-right: 100px;
   }
 }
@@ -265,6 +263,7 @@ h2 {
   .flower-img1 {
     width: 24%;
     max-width: 100px;
+    z-index: 1;
   }
 
   .flower-img2 {
@@ -275,6 +274,7 @@ h2 {
   .flower-img3 {
     width: 30%;
     max-width: 150px;
+    z-index: 100;
   }
 }
 
@@ -296,13 +296,13 @@ h2 {
   align-items: center;
   text-decoration: none;
   color: #000;
-  width: 100%; /* Adjust the width as needed */
+  width: 100%;
 }
 
 .grid-item-image {
-  width: 100%; /* Adjust the width as needed */
-  max-height: 200px; /* Adjust the max-height as needed */
-  object-fit: cover; /* Add this line to ensure the image maintains its aspect ratio */
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
   z-index: 100;
 }
 
@@ -341,7 +341,7 @@ h3 {
 
 .grid-item-text {
   position: absolute;
-  bottom: 30px; /* Adjust this value to move the text box up or down */
+  bottom: 30px;
   left: 0;
   width: 100%;
   padding: 10px;
@@ -420,14 +420,14 @@ footer {
 
 .tema_banner .photo {
   width: 100%;
-  object-fit: cover; /* Maintain aspect ratio and cover the container */
-  opacity: 0; /* Initially hide the photos */
+  object-fit: cover;
+  opacity: 0;
   transition: opacity 0.5s ease;
 }
 
 .tema_banner .photo.fade-in {
-  opacity: 1; /* Set opacity to 1 to reveal the photos */
-  margin-bottom: 0; /* Add this line to remove the bottom margin */
+  opacity: 1;
+  margin-bottom: 0;
 }
 
 .photo-grid {
@@ -494,7 +494,6 @@ footer {
   font-style: normal;
   font-size: 1.5rem;
   line-height: 2.2cap;
-  text-align: justify;
   margin-top: -5px;
 }
 
@@ -516,8 +515,8 @@ footer {
   position: relative;
   overflow: hidden;
   display: inline-block;
-  width: 300px; /* Adjust the width as desired */
-  height: auto; /* Adjust the height as desired */
+  width: 300px;
+  height: auto;
   margin-top: 60px;
 }
 
@@ -527,10 +526,13 @@ footer {
   height: auto;
 }
 
-.back_link:hover::before {
-  opacity: 0.2; /* Adjust the opacity as desired */
+.button {
+  transition: opacity 0.3s ease;
 }
 
+.button:hover {
+  opacity: 0.7; /* Adjust the opacity as desired */
+}
 /**** BAKK TAKKI *****/
 
 .tema_banner {
@@ -546,22 +548,24 @@ footer {
 .back-link::before {
   content: "";
   display: block;
-  width: 90px; /* Adjust the width and height as per your image size */
+  width: 90px;
   height: 30px;
-  background-image: url("tilbagaknap.png"); /* Replace 'path/to/your/image.png' with the actual path to your image */
+  background-image: url("tilbagaknap.png");
   background-size: cover;
   cursor: pointer;
 }
-
+.back_link:hover::before {
+  opacity: 0.2;
+}
 .back-link:hover::before {
-  opacity: 0.8; /* Adjust the opacity as desired */
+  opacity: 0.8;
 }
 
 /****** OM MIG *********/
 
 .cv {
   width: 100%;
-  max-width: 800px; /* Set the maximum width for smaller screens */
+  max-width: 800px;
   margin-bottom: 10px;
   margin-top: 50px;
   text-align: center;
